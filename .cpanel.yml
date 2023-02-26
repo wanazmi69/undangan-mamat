@@ -1,0 +1,5 @@
+---
+deployment:
+tasks:
+- export DEPLOYPATH=home/getu9153/undangan-mamat
+- /bin/cp -r * $DEPLOYPATH
