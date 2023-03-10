@@ -102,7 +102,7 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-
+# cc
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
