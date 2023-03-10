@@ -26,25 +26,7 @@
             class="flex flex-col relative  h-[500px] w-full md:w-96 p-2 rounded-md overflow-scroll space-y-5 border-2 border-[#C5A757]">
             <img class="absolute w-full h-full bg-cover top-0 right-0 opacity-50 z-0 " src="{% static 'img/2.jpg' %}" alt="">
 
-            {% for user in users reversed %}
-
-            <!--  -->
-
-            <div class="flex flex-col z-10 shadow-md items-center max-w-sm bg-white rounded-md p-2 space-y-2 {% if user.name == None and user.address == None %}
-        hidden
-        {% endif %}">
-
-                <span class="font-sans text-sm">
-                    @{{user.name}} -
-                    {{user.address}}
-                </span>
-
-                <span class="text-center text-sm">
-                    {{user.message}}
-                </span>
-
-            </div>
-            {% endfor %}
+           
             <!--  -->
 
 
