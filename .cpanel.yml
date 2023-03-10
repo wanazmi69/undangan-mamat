@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=home/getu9153/public_html/project_scale/undangan_mamat
     - /bin/cp -r * $DEPLOYPATH
+    - /bin/cp -r myweb $DEPLOYPATH
