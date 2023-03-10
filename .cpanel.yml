@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=home/getu9153/publick_html/project_scale/undangan-mamat
+- export DEPLOYPATH=home/getu9153/public_html/project_scale/undangan-mamat
 - /bin/cp -r * $DEPLOYPATH
