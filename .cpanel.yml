@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=home/getu9153/public_html/project_django
+    - export DEPLOYPATH=home/project_django
     - /bin/cp -R * $DEPLOYPATH
