@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-zn96zr$i2z&^h4^(coex$x&r5i9vt1fuh#mv82jdwwo2-!j3hk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['project.scale.web.id']
+ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['project.scale.web.id']
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-    'project.scale.web.id'
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+#     'project.scale.web.id'
+# ]
 
 
 # Application definition
