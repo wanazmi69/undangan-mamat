@@ -12,10 +12,8 @@
       "config": {
         "distDir": "staticfiles"
       }
-    },
-    // { "src": "theme/static/css/dist/style.css", "use": "@vercel/static" },
-    // { "src": "static/js/howler.js", "use": "@vercel/static" }
-    // { "src": "static/js/howler.js", "use": "@vercel/static" }
+    }
+
   ],
   "routes": [
     {
