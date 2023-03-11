@@ -7,7 +7,7 @@
     {
       "src": "theme/static/css/dist/*.css",
       "use": "@vercel/static"
-    },
+    }
   ],
   "routes": [
     {
