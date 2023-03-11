@@ -1,5 +1,3 @@
-
-
 {
   "builds": [
     {
@@ -7,13 +5,9 @@
       "use": "@vercel/python"
     },
     {
-      "src": "build_files.sh",
-      "use": "@vercel/static",
-      "config": {
-        "distDir": "staticfiles"
-      }
-    }
-
+      "src": "theme/static/css/dist/*.css",
+      "use": "@vercel/static"
+    },
   ],
   "routes": [
     {
@@ -22,4 +16,3 @@
     }
   ]
 }
-
