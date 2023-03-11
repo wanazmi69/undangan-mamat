@@ -15,3 +15,16 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vercel_app.settings')
 
 application = get_wsgi_application()
 app = get_wsgi_application()
+
+
+# import os
+# import pymysql # import pymysql
+
+# pymysql.install_as_MySQLdb() # call this method before any Django import
+
+# from django.core.wsgi import get_wsgi_application
+
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'vercel_app.settings')
+
+# application = get_wsgi_application()
+# app = get_wsgi_application()
