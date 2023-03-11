@@ -12,6 +12,7 @@
 	<!-- font -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="icon" href="{% static 'img/asset01.png' %}">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&display=swap" rel="stylesheet">
@@ -102,53 +103,63 @@
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="{% static 'js/howler.min.js' %}"></script>
 <script>
-</script>
-<script>
+
 
 	const bgImage = document.getElementById("bgImage");
 	const isiUndangan = document.getElementById('isiUndangan');
 	const isiUndangan2 = document.getElementById('isiUndangan2');
 	const scrollButton = document.getElementById('scroll-button');
 	const scrollTarget = document.querySelector(scrollButton.getAttribute('data-scroll-target'))
+	let status = false
+	let scrolku = 0
+	let sound = new Howl({
+			src: ['https://coo.ceoc.cx/api/v1/download?sig=U4uZPMZQ5Wu61MpZp4QyfPCU541ARHwbNQyurgCMzA%2B1DvvTGXEq13fR%2BrkOrPcq%2Bax%2BYi7GcctRJGruS7NPnXy3kONL9s9wI4hq4IuBb561pIrArRrk0Qh7PqBj%2BxwOjvdrYt%2F7LO9jlbVKKUROBHmSoyosjlmALa0YiXvEM%2FwihyT3ZnR%2FqBYHCO5w7E0OJ1LF7JZtWg2OOX%2Fo%2BDWlDfnyNLiwcnpyPRqcPN8XRpGi4zp2kYmrpf0z4pDu7VbjmI6TwI1c3fmU8jzlczu%2BPceFH6K%2FVPecj8XHdf4Q8LsAm6o%2BQuDrwA72R2SFVmcNVNtaj%2FI3NRfmnOyOMw8chA%3D%3D&v=Trjrj_fQnIM&_=0.9959496963547536'],
+			autoplay: false,
+			html5: true,
+			onplayerror: function () {
+				sound.once('unlock', function () {
+					sound.play();
+				});
+			}
+
+		});
+
+
+
+	let playAudio = () => {
+
+		if (status == false) {
+			sound.pause();
+			status = true
+		} else {
+
+			sound.play();
+			// Howler.volume(0.2);
+			status = false
+		}
+	}
 	scrollButton.addEventListener('click', () => {
+
+		sound.play();
 		isiUndangan.classList.remove('hidden');
 		isiUndangan2.classList.remove('hidden');
 		bgImage.classList.remove('h-screen')
 		scrollTarget.scrollIntoView({
 			behavior: 'smooth'
-			
+
 		});
 		setTimeout(function () {
 			$('#labelKado, #detailGift').fadeOut('slow');
 		}, 2000)
 		AOS.init();
 
+
+
 	})
 
-	// submint form
-	$(document).ready(function () {
-		$('.btn').click(function () {
 
-			let fomrdata = $('#messageForm').serialize()
-			$.ajax({
-				url: '',
-				type: 'POST',
-				data: fomrdata,
-				success: function (response) {
-					$('#response').text('Thank you for contacting us!');
-				},
-				error: function (response) {
-					var errors = JSON.parse(response.responseText).errors;
-					for (var field in errors) {
-						$('#' + field + '-error').text(errors[field][0]);
-					}
-				}
-
-			})
-
-		})
-	})
 
 
 
@@ -169,42 +180,6 @@
 	})
 </script>
 
-<script src="{% static 'js/howler.min.js' %}"></script>
-<script>
-	let status = false
-	let scrolku = 0
-	let sound = new Howl({
-		src: ['https://coo.ceoc.cx/api/v1/download?sig=U4uZPMZQ5Wu61MpZp4QyfPCU541ARHwbNQyurgCMzA%2B1DvvTGXEq13fR%2BrkOrPcq%2Bax%2BYi7GcctRJGruS7NPnXy3kONL9s9wI4hq4IuBb561pIrArRrk0Qh7PqBj%2BxwOjvdrYt%2F7LO9jlbVKKUROBHmSoyosjlmALa0YiXvEM%2FwihyT3ZnR%2FqBYHCO5w7E0OJ1LF7JZtWg2OOX%2Fo%2BDWlDfnyNLiwcnpyPRqcPN8XRpGi4zp2kYmrpf0z4pDu7VbjmI6TwI1c3fmU8jzlczu%2BPceFH6K%2FVPecj8XHdf4Q8LsAm6o%2BQuDrwA72R2SFVmcNVNtaj%2FI3NRfmnOyOMw8chA%3D%3D&v=Trjrj_fQnIM&_=0.9959496963547536'],
-		autoplay: true,
-		html5: true,
-		onplayerror: function () {
-			sound.once('unlock', function () {
-				sound.play();
-			});
-		}
 
-	});
-	let playAudio = () => {
-
-		if (status == false) {
-			sound.pause();
-			status = true
-		} else {
-
-			sound.play();
-			// Howler.volume(0.2);
-			status = false
-		}
-	}
-
-
-	sound.play();
-	// Howler.volume(0.2);
-
-</script>
-<script>
-
-
-</script>
 
 </html>

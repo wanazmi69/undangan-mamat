@@ -8,7 +8,7 @@
                 memberikan doa restu
             </span>
 
-            <form id="messageForm" method="POST" class="flex flex-col space-y-5 w-full">
+           <form id="messageForm" method="POST" action="/" class="flex flex-col space-y-5 w-full">
                 {% csrf_token %}
                 <input class="rounded-md text-sm w-full" type="text" placeholder="Nama" name="{{form.name.name}}"
                     required>
@@ -17,7 +17,7 @@
                 <textarea name="{{form.message.name}}" id="" cols="30" rows="10" class="rounded-md text-sm w-full"
                     placeholder="Ucapan dan Doa" required></textarea>
                 <button id="submitBtn" class="bg-[#C5A757] font-sans text-white p-2 rounded-full w-full btn"
-                    type="button">
+                    type="submit">
                     Kirim
                 </button>
             </form>
@@ -26,7 +26,25 @@
             class="flex flex-col relative  h-[500px] w-full md:w-96 p-2 rounded-md overflow-scroll space-y-5 border-2 border-[#C5A757]">
             <img class="absolute w-full h-full bg-cover top-0 right-0 opacity-50 z-0 " src="{% static 'img/2.jpg' %}" alt="">
 
-           
+            {% for user in users reversed %}
+
+            <!--  -->
+
+            <div class="flex flex-col z-10 shadow-md items-center max-w-sm bg-white rounded-md p-2 space-y-2 {% if user.name == None and user.address == None %}
+        hidden
+        {% endif %}">
+
+                <span class="font-sans text-sm">
+                    @{{user.name}} -
+                    {{user.address}}
+                </span>
+
+                <span class="text-center text-sm">
+                    {{user.message}}
+                </span>
+
+            </div>
+            {% endfor %}
             <!--  -->
 
 

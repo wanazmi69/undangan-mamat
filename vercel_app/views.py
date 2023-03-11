@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from UserMessage.forms import UserForm
 from UserMessage.models import User
@@ -10,9 +10,8 @@ def index(request):
     if request.method == 'POST':
         if form.is_valid():
             form.save()
-            return JsonResponse({'status': 'success'})
-        else:
-            return JsonResponse({'status': 'errors'})
+            return redirect('/')
+
     else:
         form = UserForm()
 
@@ -21,5 +20,7 @@ def index(request):
         'form': form,
     }
     return render(request, 'index.html', context)
+
+    
 
     
