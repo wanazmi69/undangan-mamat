@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zn96zr$i2z&^h4^(coex$x&r5i9vt1fuh#mv82jdwwo2-!j3hk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*','wedding-arahmat-project.scale.web.id','.vercel.app', '.now.sh']
 # ALLOWED_HOSTS = ['project.scale.web.id']
@@ -67,7 +67,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     # 'django_browser_reload.middleware.BrowserReloadMiddleware',
 
@@ -149,8 +149,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+if DEBUG:
+    STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+else:
+    STATIC_ROOT = BASE_DIR / "theme/static"
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
