@@ -13,10 +13,10 @@
         "distDir": "staticfiles"
       }
     },
-    "env": {
-      "DATABASE_URL": "postgresql://postgres:70K75jT5Vqtz3Rcj5rVj@containers-us-west-202.railway.app:6420/railway"
-    }
   ],
+  "env": {
+    "DATABASE_URL": "postgres://USER:PASSWORD@HOST:PORT/NAME"
+  },
   "routes": [
     {
       "src": "/(.*)",
