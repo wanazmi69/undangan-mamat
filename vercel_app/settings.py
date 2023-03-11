@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 
-    # "whitenoise.runserver_nostatic",
+    "whitenoise.runserver_nostatic",
  
     'django.contrib.staticfiles',
     
@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 
-    # "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     # 'django_browser_reload.middleware.BrowserReloadMiddleware',
 
@@ -189,16 +189,21 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 # STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 STATIC_URL = 'static/'
-# MEDIA_URL = '/media/'
-STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_builds', 'static')
-# if DEBUG:
+MEDIA_URL = '/media/'
+# STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 
-#   STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
+# STATIC_ROOT = (
+#         # os.path.join(BASE_DIR, "static"),
+#         os.path.join(BASE_DIR, "static")
+               
+#         )
+if DEBUG:
 
-# else:
+    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
 
-#   STATIC_ROOT = os.path.join(BASE_DIR,  'static')
+else:
+
+    STATIC_ROOT = os.path.join(BASE_DIR,  'static')
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
