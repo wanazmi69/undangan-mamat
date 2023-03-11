@@ -154,7 +154,7 @@ if DEBUG:
 else:
     STATIC_ROOT =  (
         # BASE_DIR / 'theme/static',
-        os.path.join(BASE_DIR, 'staticfiles_build', 'theme/static')
+        os.path.join(BASE_DIR, 'staticfiles_build', 'static')
                     
         )
 # Default primary key field type
