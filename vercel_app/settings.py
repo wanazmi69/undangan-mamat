@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zn96zr$i2z&^h4^(coex$x&r5i9vt1fuh#mv82jdwwo2-!j3hk'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*','wedding-arahmat-project.scale.web.id','.vercel.app', '.now.sh']
 # ALLOWED_HOSTS = ['project.scale.web.id']
@@ -50,8 +50,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
 
-    "whitenoise.runserver_nostatic",
- 
     'django.contrib.staticfiles',
     
     'tailwind',
@@ -70,7 +68,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 
-    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     # 'django_browser_reload.middleware.BrowserReloadMiddleware',
 
@@ -102,23 +99,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'vercel_app.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '70K75jT5Vqtz3Rcj5rVj',
-#         'HOST': 'containers-us-west-202.railway.app',
-#         'PORT': '6420',
-#     }
-# }
 
-# DATABASES = {
-#     'default': dj_database_url.config(default='postgresql://postgres:70K75jT5Vqtz3Rcj5rVj@containers-us-west-202.railway.app:6420/railway')
-# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -131,25 +113,6 @@ DATABASES = {
 }
 pymysql.version_info = (1, 4, 2, "final", 0)
 pymysql.install_as_MySQLdb()
-# DATABASES = {}
-# cc
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# DATABASES['default'] = dj_database_url.config(
-#     conn_max_age=600,
-#     conn_health_checks=True,
-# )
-# DATABASES['default'] = dj_database_url.config()
-
-# DATABASES = {
-
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -183,30 +146,11 @@ USE_TZ = True
 
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.0/howto/static-files/
-
-# STATIC_URL = 'static/'
-# STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
-# STATICFILES_DIRS = os.path.join(BASE_DIR,'static'),
 
-# STATIC_ROOT = (
-#         # os.path.join(BASE_DIR, "static"),
-#         os.path.join(BASE_DIR, "static")
-               
-#         )
-if DEBUG:
-
-    STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static/')]
-
-else:
-
-    STATIC_ROOT = os.path.join(BASE_DIR,  'static')
-
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
