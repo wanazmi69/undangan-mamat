@@ -8,7 +8,7 @@ export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
 export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
 python3.9 -m pip install install mysqlclient
 python3.9 -m pip install install mysql-server
-python3.9 -m pip install install libmysqlclient-dev
+# python3.9 -m pip install install libmysqlclient-dev
 
 
 
