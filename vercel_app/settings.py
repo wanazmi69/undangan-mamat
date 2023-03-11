@@ -96,26 +96,26 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'railway',
-#         'USER': 'postgres',
-#         'PASSWORD': '70K75jT5Vqtz3Rcj5rVj',
-#         'HOST': 'containers-us-west-202.railway.app',
-#         'PORT': '6420',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'getu9153_message_wedding_mamat',
-        'USER': 'getu9153_wanazmi',
-        'PASSWORD': 'iHu9ZSvtjRFzT_S',
-        'HOST': '217.21.72.156',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': '70K75jT5Vqtz3Rcj5rVj',
+        'HOST': 'containers-us-west-202.railway.app',
+        'PORT': '6420',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'getu9153_message_wedding_mamat',
+#         'USER': 'getu9153_wanazmi',
+#         'PASSWORD': 'iHu9ZSvtjRFzT_S',
+#         'HOST': '217.21.72.156',
+#         'PORT': '3306',
+#     }
+# }
 # DATABASES = {}
 # cc
 # DATABASES = {
