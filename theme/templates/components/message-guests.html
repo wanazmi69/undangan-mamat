@@ -28,6 +28,7 @@
             <!-- isi pesan -->
             {% for user in users reversed %}
 
+<<<<<<< HEAD
                 <div class="flex flex-col z-10 shadow-md items-center max-w-sm bg-white rounded-md p-2 space-y-2 {% if user.name == None and user.address == None %}
                             hidden
                             {% endif %}">
@@ -45,6 +46,28 @@
             {% endfor %}
 
             <!-- ispesan akhir -->
+            
+=======
+            {% for user in users reversed %}
+
+            <!--  -->
+>>>>>>> master
+
+            <div class="flex flex-col z-10 shadow-md items-center max-w-sm bg-white rounded-md p-2 space-y-2 {% if user.name == None and user.address == None %}
+        hidden
+        {% endif %}">
+
+                <span class="font-sans text-sm">
+                    @{{user.name}} -
+                    {{user.address}}
+                </span>
+
+                <span class="text-center text-sm">
+                    {{user.message}}
+                </span>
+
+            </div>
+            {% endfor %}
             
 
 

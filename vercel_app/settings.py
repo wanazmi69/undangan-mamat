@@ -98,6 +98,7 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+<<<<<<< HEAD
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
@@ -112,6 +113,8 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 # DATABASES = {
 #     'default': dj_database_url.config(default='postgresql://postgres:70K75jT5Vqtz3Rcj5rVj@containers-us-west-202.railway.app:6420/railway')
 # }
+=======
+>>>>>>> master
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -122,10 +125,14 @@ DATABASES = {
         'PORT': '3306',
     }
 }
+<<<<<<< HEAD
 pymysql.version_info = (1, 4, 2, "final", 0)
 pymysql.install_as_MySQLdb()
 # DATABASES = {}
 # cc
+=======
+# ccffffffffff
+>>>>>>> master
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
