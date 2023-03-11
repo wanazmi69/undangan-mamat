@@ -11,8 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import pymysql
 import os
-import dj_database_url
+# import dj_database_url
 # from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -108,19 +109,21 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': dj_database_url.config(default='postgresql://postgres:70K75jT5Vqtz3Rcj5rVj@containers-us-west-202.railway.app:6420/railway')
-}
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'getu9153_message_wedding_mamat',
-#         'USER': 'getu9153_wanazmi',
-#         'PASSWORD': 'iHu9ZSvtjRFzT_S',
-#         'HOST': '217.21.72.156',
-#         'PORT': '3306',
-#     }
+#     'default': dj_database_url.config(default='postgresql://postgres:70K75jT5Vqtz3Rcj5rVj@containers-us-west-202.railway.app:6420/railway')
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'getu9153_message_wedding_mamat',
+        'USER': 'getu9153_wanazmi',
+        'PASSWORD': 'iHu9ZSvtjRFzT_S',
+        'HOST': '217.21.72.156',
+        'PORT': '3306',
+    }
+}
+pymysql.version_info = (1, 4, 2, "final", 0)
+pymysql.install_as_MySQLdb()
 # DATABASES = {}
 # cc
 # DATABASES = {
