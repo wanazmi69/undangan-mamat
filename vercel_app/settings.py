@@ -22,6 +22,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-zn96zr$i2z&^h4^(coex$x&r5i9vt1fuh#mv82jdwwo2-!j3hk'
 
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -103,7 +105,8 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 #     }
 # }
 
-
+MYSQLCLIENT_CFLAGS='pkg-config mysqlclient --cflags'
+MYSQLCLIENT_LDFLAGS='pkg-config mysqlclient --libs'
 
 # cc
 # DATABASES = {
