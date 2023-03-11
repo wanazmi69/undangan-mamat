@@ -1,5 +1,0 @@
----
-deployment:
-tasks:
-- export DEPLOYPATH=/home/getu9153/repositories/undangan-mamat
-- /bin/cp -r * $DEPLOYPATH
