@@ -25,13 +25,16 @@ SECRET_KEY = 'django-insecure-zn96zr$i2z&^h4^(coex$x&r5i9vt1fuh#mv82jdwwo2-!j3hk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*','.vercel.app', '.now.sh']
 # ALLOWED_HOSTS = ['project.scale.web.id']
 
-# INTERNAL_IPS = [
-#     "127.0.0.1",
-#     'project.scale.web.id'
-# ]
+INTERNAL_IPS = [
+    "127.0.0.1",
+    'project.scale.web.id',
+    '*',
+    '.vercel.app',
+    '.now.sh'
+]
 
 
 # Application definition
@@ -92,16 +95,17 @@ WSGI_APPLICATION = 'vercel_app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'getu9153_message_wedding_mamat',
-        'USER': 'getu9153_wanazmi',
-        'PASSWORD': 'iHu9ZSvtjRFzT_S',
-        'HOST': '217.21.72.156',
-        'PORT': '3306',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'getu9153_message_wedding_mamat',
+#         'USER': 'getu9153_wanazmi',
+#         'PASSWORD': 'iHu9ZSvtjRFzT_S',
+#         'HOST': '217.21.72.156',
+#         'PORT': '3306',
+#     }
+# }
+DATABASES = {}
 # cc
 # DATABASES = {
 #     'default': {
