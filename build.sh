@@ -4,6 +4,9 @@
 echo "Building the project..."
 python3.9 -m pip install -r requirements.txt
 
+export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
+export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
+
 echo "Make Migration..."
 python3.9 manage.py tailwind install
 python3.9 manage.py makemigrations --noinput
