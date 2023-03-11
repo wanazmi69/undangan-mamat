@@ -12,7 +12,11 @@
       "config": {
         "distDir": "staticfiles"
       }
-    }
+    },
+    { "src": "*.html", "use": "@vercel/static" },
+    { "src": "*.py", "use": "@vercel/python" },
+    { "src": "*.js", "use": "@vercel/node" }
+    { "src": "*.css", "use": "@vercel/node" }
   ],
   "routes": [
     {
