@@ -23,7 +23,7 @@
     }
   ],
   "env": {
-    "DJANGO_SETTINGS_MODULE": "project.settings"
+    "DJANGO_SETTINGS_MODULE": "vercel_app.settings"
   },
   "static": {
     "root": "staticfiles",
