@@ -12,7 +12,7 @@
       "config": {
         "distDir": "staticfiles"
       }
-    },
+    }
   ],
   "env": {
     "DATABASE_URL": "postgres://USER:PASSWORD@HOST:PORT/NAME"
