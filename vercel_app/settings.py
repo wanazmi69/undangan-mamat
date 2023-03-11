@@ -153,8 +153,8 @@ if DEBUG:
     STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 else:
     STATIC_ROOT =  (
-        BASE_DIR / 'theme/static',
-        os.path.join(BASE_DIR, 'theme/static', 'static')
+        # BASE_DIR / 'theme/static',
+        os.path.join(BASE_DIR, 'staticfiles_build', 'theme/static')
                     
         )
 # Default primary key field type
