@@ -3,10 +3,11 @@
 # Build the project
 
 echo "Building the project..."
-export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
-export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
-python3.9 -m pip install install mysqlclient
+# export MYSQLCLIENT_CFLAGS=`pkg-config mysqlclient --cflags`
+# export MYSQLCLIENT_LDFLAGS=`pkg-config mysqlclient --libs`
+python3.9 -m pip install install mysql-server
 python3.9 -m pip install -r requirements.txt
+
 
 # python3.9 -m pip install install libmysqlclient-dev
 
