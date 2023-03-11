@@ -1,0 +1,33 @@
+{% load static %}
+
+<div class="flex justify-center items-center w-full p-5 pt-10">
+    <div class="relative flex flex-col md:flex-row justify-center items-center rounded-lg py-20 md:p-5 w-full md:max-w-4xl md:space-x-10 bg-slate-100 shadow-lg  ">
+        <img class="absolute -bottom-5 -left-5 w-56" src="{% static 'img/bingkai01.png' %}" alt="" loading="lazy">
+        <img class="absolute -top-5 -right-5 w-56 rotate-180" src="{% static 'img/bingkai01.png' %}" alt="" loading="lazy">
+        <div class="flex flex-col  justify-center items-center md:border-[2px] md:pr-10 md:border-slate-100 md:border-r-slate-600 ">
+             <span class=" text-md">
+                 The Wedding Of
+             </span>
+             <div class="p-5">
+                 <img class="w-56 md:w-64 rounded-md" src="{% static 'img/asset01.png' %}" alt="" loading="lazy">
+
+             </div>
+        </div>
+        <div class="flex flex-col justify-center items-center space-y-5 p-5">
+            <span class="text-lg">
+                Cilina & Mamat
+            </span>
+
+            <button  data-scroll-target="#isiUndangan" id="scroll-button"
+            class="flex justify-center items-center space-x-2 bg-orange-300 py-2 px-5 rounded-full text-sm font-mono text-white z-50">
+                <span class="material-symbols-outlined">
+                    favorite
+                </span>
+                <span>
+                    Buka Undangan
+                </span>
+            </button>
+        </div>
+
+    </div>
+</div>

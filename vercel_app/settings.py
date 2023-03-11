@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['wedding-arahmat-project.scale.web.id','.vercel.app', '.now.sh'
 # ALLOWED_HOSTS = ['project.scale.web.id']
 
 INTERNAL_IPS = [
+ 
     "127.0.0.1",
     'project.scale.web.id',
     'wedding-arahmat-project.scale.web.id',
@@ -181,8 +182,8 @@ USE_TZ = True
 STATIC_URL = 'static/'
 # STATI_ROOT = BASE_DIR / "static"
 # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'staticfiles'),
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     BASE_DIR, 'static',
 ]
