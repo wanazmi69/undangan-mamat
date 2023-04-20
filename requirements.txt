@@ -2,3 +2,4 @@ Django==4.0.2
 django-tailwind @ git+https://github.com/timonweb/django-tailwind.git@37b81f631edddac04844413bb5635a1c73e5af30
 dj-database-url==0.5.0
 PyMySQL==1.0.2
+python-dotenv==1.0.0
