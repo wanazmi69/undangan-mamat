@@ -14,7 +14,7 @@ load_dotenv()
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*'] if DEBUG else ['wedding-arahmat-project.scale.web.id','.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*'] if DEBUG else ['wedding-arahmat.scale.web.id','.vercel.app', '.now.sh']
 
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
